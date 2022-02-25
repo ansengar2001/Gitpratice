@@ -1,0 +1,73 @@
+using System;
+
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+public class Person{
+	public string Name{set; get;}
+	public string Address{set; get;}
+	public int Age{set; get;}
+   /* public override String ToString()
+	{
+		return Name+" "+Address+" ";
+	}*/
+}
+public class PersonImplementation
+{
+	public string GetName(IList<Person> person)
+	{
+		foreach(Person p in person)
+		{
+			Console.Write(p.Name+" "+p.Address+" ");
+	    }
+		Average(person);
+		Max(person);
+		
+		return "shoe all";
+	}
+	public double Average(IList<Person> person)
+	{
+		double sum=0,count=0;
+		foreach(Person p in person)
+		{
+			sum+=p.Age;
+			count++;
+		}
+        return sum/count;
+	}
+	public int Max(IList<Person> person)
+	{
+		int  max=0;
+		foreach(Person p in person)
+		{
+			if(max<p.Age)
+			{
+				max=p.Age;
+			}
+		}
+        return max;
+	}
+	
+	
+}
+class Source {
+	static void Main() {
+	
+	}
+}
+
+
+
+
+
+
+
+-=-------------------------------------------------------
+Aarya A2101 Daniel D104 Ira H801 Jennifer I1704 
+Unhandled Exception:
+System.InvalidOperationException: Method Error
+  at eval.Main (System.String[] args) [0x000d0] in <e57fd4c196724ca79bb17fd8b1d86ca0>:0 
+[ERROR] FATAL UNHANDLED EXCEPTION: System.InvalidOperationException: Method Error
+  at eval.Main (System.String[] args) [0x000d0] in <e57fd4c196724ca79bb17fd8b1d86ca0>:0 
